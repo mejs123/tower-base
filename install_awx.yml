@@ -21,6 +21,6 @@
     - { role: geerlingguy.git }
     - { role: geerlingguy.ansible }
     - { role: geerlingguy.docker }
-    - { role:geerlingguy.pip }
+    - { role: geerlingguy.pip }
     - { role: geerlingguy.nodejs }
     - { role: ansible-role-awx }
