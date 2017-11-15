@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Install AWX
+  hosts: '{{ target }}'
   user: ubuntu
   become: true
   become_method: sudo
