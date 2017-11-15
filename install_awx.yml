@@ -24,4 +24,4 @@
     - { role: geerlingguy.docker }
     - { role: geerlingguy.pip }
     - { role: geerlingguy.nodejs }
-    - { role: ansible-role-awx }
+    - { role: geerlingguy.awx }
