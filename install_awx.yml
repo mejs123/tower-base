@@ -16,11 +16,11 @@
       changed_when: false
 
   roles:
-    - name: geerlingguy.repo-epel
-      when: ansible_os_family == "RedHat"
-    - geerlingguy.git
-    - geerlingguy.ansible
-    - geerlingguy.docker
-    - geerlingguy.pip
-    - geerlingguy.nodejs
-    - ansible-role-awx
+          #- name: geerlingguy.repo-epel
+          #when: ansible_os_family == "RedHat"
+    - { role: geerlingguy.git }
+    - { role: geerlingguy.ansible }
+    - { role: geerlingguy.docker }
+    - { role:geerlingguy.pip }
+    - { role: geerlingguy.nodejs }
+    - { role: ansible-role-awx }
