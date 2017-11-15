@@ -13,6 +13,9 @@
       apt: update_cache=yes cache_valid_time=600
       when: ansible_os_family == 'Debian'
       changed_when: false
+      
+    - name: install python2
+       raw: sudo apt-get -y install python-simplejson
 
   roles:
     - name: geerlingguy.repo-epel
