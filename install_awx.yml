@@ -23,4 +23,4 @@
     - geerlingguy.docker
     - geerlingguy.pip
     - geerlingguy.nodejs
-    - role_under_test
+    - ansible-role-awx
