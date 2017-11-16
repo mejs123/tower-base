@@ -5,4 +5,4 @@
 - src: geerlingguy.docker
 - src: geerlingguy.pip
 - src: geerlingguy.nodejs
-- src: apt-cacher-ng-client
+- src: juju4.ansible-apt-cacher-ng-client 

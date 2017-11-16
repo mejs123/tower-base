@@ -2,4 +2,4 @@
 - hosts: all
   remote_user: ubuntu
   roles:
-    - { role: apt-cacher-ng-client }
+    - { role: ansible-apt-cacher-ng-client }
