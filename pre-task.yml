@@ -8,6 +8,7 @@
     
     pre_tasks:
      - name: 'install python2'
-       raw: apt install python python-apt
-       #apt: python
-       #state: present
+       #raw: apt install python python-apt
+       apt: 
+         name: python
+         state: present
