@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
+  remote_user: ubuntu
   roles:
-    - { role: ansible-role-apt-cacher-ng, apt_cacher_ng_port: 1337, apt_cacher_ng_cache_dir: /var/cache/travis-apt-cacher-ng }
+    - { role: apt-cacher-ng-client }
