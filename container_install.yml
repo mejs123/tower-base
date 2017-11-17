@@ -9,7 +9,7 @@
       git:
         repo: https://github.com/mejs123/tower-base.git
         dest: "~/tower-base"
-        version: devel
+        version: master
         update: yes
         accept_hostkey: yes
         force: yes
