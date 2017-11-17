@@ -7,3 +7,6 @@
   roles:
     - { role: geerlingguy.docker }
     - { role: rfhayashi.ansible-container }
+
+- include: container_install.yml
+
