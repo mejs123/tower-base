@@ -13,6 +13,9 @@
         #update: yes
         #accept_hostkey: yes
         force: yes
+
+    - name: Install ansible-container[docker]
+      pip: name=ansible-container[docker]=0.9.2
     
     - name: Run ansible-container playbook
       command: "ansible-container run"
