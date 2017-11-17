@@ -8,7 +8,7 @@
     - name: Clone tower-base into configured directory.
       git:
         repo: https://github.com/mejs123/tower-base.git
-        dest: "~/tower-base"
+        dest: "/home/ubuntu/tower-base"
         #version: master
         #update: yes
         #accept_hostkey: yes
