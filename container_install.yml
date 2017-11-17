@@ -17,6 +17,12 @@
     - name: Install ansible-container[docker]
       pip: name=ansible-container[docker]==0.9.2
     
+   
+    - name: Run ansible_galaxy install
+      command: "ansible-galaxy install -r requirements.yml"
+      args:
+        chdir: "~/tower-base/containers"
+
     - name: Run ansible-container playbook
       command: "ansible-container run"
       args:
