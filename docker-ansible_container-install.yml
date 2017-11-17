@@ -5,5 +5,5 @@
   become_method: sudo
 
   roles:
-    - { role: rfhayashi.ansible-container }
     - { role: geerlingguy.docker }
+    - { role: rfhayashi.ansible-container }
