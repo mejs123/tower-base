@@ -9,9 +9,9 @@
       git:
         repo: https://github.com/mejs123/tower-base.git
         dest: "~/tower-base"
-        version: master
-        update: yes
-        accept_hostkey: yes
+        #version: master
+        #update: yes
+        #accept_hostkey: yes
         force: yes
     
     - name: Run ansible-container playbook
