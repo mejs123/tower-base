@@ -24,11 +24,11 @@
         chdir: "/home/ubuntu/tower-base/containers"
 
     - name: Run ansible-container playbook
-      command: "ansible-container run"
+      command: "ansible-container build"
       args:
         chdir: "/home/ubuntu/tower-base/containers"
 
     - name: Run ansible-container playbook
-      command: "ansible-container build"
+      command: "ansible-container run"
       args:
         chdir: "/home/ubuntu/tower-base/containers"
