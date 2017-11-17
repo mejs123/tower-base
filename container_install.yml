@@ -19,7 +19,7 @@
     
    
     - name: Run ansible_galaxy install
-      command: "ansible-galaxy -r install requirements.yml"
+      command: "ansible-galaxy -r install ~/tower-base/containers/requirements.yml"
       args:
         chdir: "~/tower-base/containers"
 
