@@ -1,14 +1,20 @@
 ---
-- name: Clone tower-base into configured directory.
-  git:
-    repo: https://github.com/mejs123/tower-base.git
-    dest: "~/tower-base"
-    version: devel
-    update: yes
-    accept_hostkey: yes
-    force: yes
+- hosts: all
+  remote_user: ubuntu
+  become: true
+  become_method: sudo
+  
+  tasks:  
+    - name: Clone tower-base into configured directory.
+      git:
+      repo: https://github.com/mejs123/tower-base.git
+      dest: "~/tower-base"
+      version: devel
+      update: yes
+      accept_hostkey: yes
+      force: yes
     
-- name: Run ansible-container playbook
-  command: "ansible-container run"
-  args:
-    chdir: "~/tower-base/containers"
+    - name: Run ansible-container playbook
+      command: "ansible-container run"
+      args:
+        chdir: "~/tower-base/containers"
