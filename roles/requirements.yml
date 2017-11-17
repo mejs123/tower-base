@@ -7,3 +7,5 @@
 - src: geerlingguy.nodejs
 - src: juju4.ansible-apt-cacher-ng-client 
 - src: rfhayashi.ansible-container
+- src: realloc.tini
+- src: elnappoo.apt-cacher-ng
