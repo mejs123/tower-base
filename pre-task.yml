@@ -1,9 +1,9 @@
 ---
   - name: install python 2
     hosts: all
-    #remote_user: ubuntu
-    #become: yes
-    #become_method: sudo
+    remote_user: ubuntu
+    become: yes
+    become_method: sudo
     gather_facts: no
     
     pre_tasks:
