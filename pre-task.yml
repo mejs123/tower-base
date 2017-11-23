@@ -15,3 +15,5 @@
          state: present
     vars_files:
       - "group_vars/shared/vault.yml"
+  - debug:
+      msg: "System {{ variable_on_vault }} 
