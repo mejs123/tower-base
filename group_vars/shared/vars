@@ -1,0 +1,46 @@
+---
+#user account used to ssh the hosts
+pi_remote_user: adminops
+
+#remote user group name
+pi_remote_user_group: users
+
+#location of Rackspace module credentials file on controller
+RAX_CREDS_FILE: "/home/{{ pi_remote_user }}/rax_creds"
+
+#server's IP (assuming unable to check facts e.g. don't know current SSH port)
+pi_server_ip: "{{ rax_accessipv4 | default( ansible_host ) }}"
+
+##################### SSH ##########################
+
+#Default custom SSH port for use by ansible
+ansible_port: 50505
+
+#Used to set non-standard port for SSH connections
+pi_custom_ssh_port: 50505
+
+#location destination for vagrant private SSH key
+pi_key_file_private: "/home/{{ pi_remote_user }}/.ssh/id_rsa"
+
+#default location of SSH key
+pi_ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+
+#location source for public SSH key
+pi_key_file_public_src: "assets/secrets/ssh/id_rsa.pub"
+
+#location destination for public SSH key
+pi_key_file_public: "/home/{{ pi_remote_user }}/.ssh/authorized_keys"
+
+####################################################
+
+#location of secrets directory
+pi_vagrant_secrets_location: "assets/secrets"
+
+#initial location of rax_creds file
+pi_vagrant_rax_creds_location: "{{ pi_vagrant_secrets_location }}/rax_creds"
+
+#initial location of vault_pass file
+pi_vagrant_vault_pass_location: "{{ pi_vagrant_secrets_location }}/vault_pass.txt"
+
+#location of local inventories directory on controller
+pi_controller_inventories_directory: "/etc/ansible/inventories"
