@@ -5,10 +5,13 @@
     become: yes
     become_method: sudo
     gather_facts: no
-    
+    #vault_password_file: group_vars/secret/vault_pass.txt
+
     pre_tasks:
      - name: 'install python2'
        #raw: apt install python python-apt
        apt: 
-         name: python
+         name: "{{ package_name }}" 
          state: present
+    vars_files:
+      - "group_vars/shared/vault.yml"
