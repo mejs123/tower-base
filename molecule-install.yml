@@ -1,0 +1,20 @@
+---
+  - name: Install Molecule
+    hosts: all
+    remote_user: ubuntu
+    become: yes
+    become_method: sudo
+    gather_facts: no
+
+    pre_tasks:
+     - name: 'Install Molecule'
+       #raw: apt install python python-apt
+       apt: 
+         name: python-pip
+         state: present
+       
+       pip:
+         name: docker-py
+       
+       pip:
+         name: molecule
