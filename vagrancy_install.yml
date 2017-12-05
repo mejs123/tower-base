@@ -1,0 +1,22 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
+  tasks:
+  - name: Download Vagrancy 
+    get_url:
+      url: https://github.com/ryandoyle/vagrancy/releases/download/0.0.4/vagrancy-0.0.4-linux-x86_64.tar.gz 
+      dest: /home/ubuntu/vagrancy-0.0.4-linux-x86_64.tar.gz
+  
+  - name: Extract Vagrancy
+    unarchive:
+      src: vagrancy-0.0.4-linux-x86_64.tar.gz
+      dest: /home/ubuntu/
+
+  - name: Run Vagrancy
+    raw: "cd /home/ubuntu/vagrancy-0.0.4-linux-x86_64 && ./vagrancy"
+    #args:
+     #chdir: "/home/ubuntu/vagrancy-0.0.4-linux-x86_64/"
