@@ -20,8 +20,3 @@
     shell: /home/ubuntu/vagrancy-0.0.4-linux-x86_64/vagrancy
     async: 2592000
     poll: 0
-    #args:
-     #chdir: "/home/ubuntu/vagrancy-0.0.4-linux-x86_64/"
-    #supervisorctl:
-      #name: vagrancy
-      #state: started
