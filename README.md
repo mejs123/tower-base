@@ -6,6 +6,7 @@ Vagrant and VirtualBox (or some other VM provider) can be used to quickly build 
 
 This example installs Ansible's [AWX Project](https://github.com/ansible/awx) (the source code behind [Ansible Tower](https://www.ansible.com/tower)) on a CentOS 7 VM, so you can test and run AWX... to test and run more Ansible playbooks!
 
+This repository is composed of several playbooks for AWX and other uses.
 ## Getting Started
 
 This README file is inside a folder that contains a `Vagrantfile` (hereafter this folder shall be called the [vagrant_root]), which tells Vagrant how to set up your virtual machine in VirtualBox.
@@ -41,4 +42,3 @@ If you'd like additional assistance editing your hosts file, please read [How do
 
 ## Author Information
 
-Created in 2017 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
